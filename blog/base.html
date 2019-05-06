@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+    <head>
+        <title>Simplest blog</title>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<style>
+body {
+  color: red;
+}
+h1 {
+    text-align:center;
+}
+textarea { vertical-align: top; }?
+</style>
+
+    </head>
+<body>
+
+
+
+    <div class="page-header">
+    <h1>Simplest blog</h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

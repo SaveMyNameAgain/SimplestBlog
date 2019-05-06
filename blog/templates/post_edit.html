@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Отправить</button>
+    </form>
+<hr>
+    <h2>Older posts</h2>
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.published_date }} {{ post.text|linebreaksbr }}</p>
+<hr>
+        </div>
+    {% endfor %}
+
+
+
+{% endblock %}
